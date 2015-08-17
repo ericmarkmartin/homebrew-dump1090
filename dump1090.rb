@@ -3,11 +3,13 @@ require "formula"
 class Dump1090 < Formula
   homepage "https://github.com/MalcolmRobb/dump1090"
   head "https://github.com/MalcolmRobb/dump1090.git"
-  sha1 "4c57a2efac21c51bd9001d8b8d6d6b522e79a6a2"
+
+  depends_on 'pkg-config' => :build
   
   def install
     system "make"
-    system "make", "install"
+    bin.install "dump1090"
+    bin.install "view1090"
   end
 
   test do
