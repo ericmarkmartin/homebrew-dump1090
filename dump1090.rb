@@ -5,8 +5,8 @@ class Dump1090 < Formula
   head "https://github.com/MalcolmRobb/dump1090.git"
 
   depends_on 'pkg-config' => :build
-  depends on 'libusb'
-  depends on 'librtlsdr'
+  depends_on 'libusb'
+  depends_on 'librtlsdr'
   
   def install
     system "make"
