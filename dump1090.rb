@@ -1,5 +1,3 @@
-require "formula"
-
 class Dump1090 < Formula
   homepage "https://github.com/MalcolmRobb/dump1090"
   head "https://github.com/MalcolmRobb/dump1090.git"
