@@ -1,4 +1,5 @@
 class Dump1090 < Formula
+  desc 'a Mode S decoder specifically designed for RTLSDR devices'
   homepage 'https://github.com/MalcolmRobb/dump1090'
   head 'https://github.com/MalcolmRobb/dump1090.git'
 
