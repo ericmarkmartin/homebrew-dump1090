@@ -10,6 +10,7 @@ class Dump1090 < Formula
     system 'make'
     bin.install 'dump1090'
     bin.install 'view1090'
+    cp_r 'public_html', bin
   end
 
   test do
