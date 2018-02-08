@@ -9,9 +9,14 @@ class Dump1090 < Formula
   
   def install
     system 'make'
-    bin.install 'dump1090'
     bin.install 'view1090'
-    cp_r 'public_html', bin
+    libexec.install 'dump1090'
+    cp_r 'public_html', libexec
+    (bin/"dump1090").write <<~EOS
+      #!/bin/sh
+      cd '#{libexec}'
+      './dump1090' "$@"
+    EOS
   end
 
   test do
